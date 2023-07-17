@@ -1,0 +1,176 @@
+{% extends 'EmpHome.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+
+{% comment %}carousel{% endcomment %}
+<div class="container-fluid my-3">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/static/img/airplane-taking-off.avif" width="1500" height="500" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block" style="background-color:rgba(97,86,86,0.32);">
+            <h5>Soar to New Heights</h5>
+            <p>Embark on Extraordinary Adventures with Our Global Airline Network.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/static/img/airplane-sunset.avif" width="1500" height="500"  class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block" style="background-color:rgba(97,86,86,0.32);">
+            <h5>Unleash Your Wanderlust</h5>
+            <p>Unlock Limitless Discoveries as You Jetset Across Continents with Our Premier Airline Services.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/static/img/passenger-airplane.avif" width="1500" height="500" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block" style="background-color:rgba(97,86,86,0.42);">
+            <h5>Experience Travel Elevated</h5>
+            <p>Where Dreams Take Flight and Unforgettable Memories Are Crafted with our Luxurious Airline Experiences.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+<div class="container my-4">
+
+<h1 class="text-center my-3" style="color:rgb(33 37 41);text-decoration:none;text-transform:uppercase;z-index:9999;position:relative;font-size:25px;" my-4><b>Elevating Careers, Empowering Lives: Our Employee Benefits Soar Above the Rest!</b></h1>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 ">
+    <div class="col">
+        <div class="card shadow-sm">
+        <img src="/static/img/travel.jfif" alt="RMW AIRLINES" width="360" height="170" style="border-radius:5px;">
+        <div class="card-body">
+            <h1 class="text-center" style="font-size:16px;color:#b71919;"><b>TRAVEL PRIVILEGES</b></h1>
+            <h1 class="text-center" style="font-size:15px;text-color:rgb(33 37 41);">Reduced fares and complimentary flights for employees and eligible family members, enabling them to explore various destinations and experience air travel at a reduced cost.</h1>
+            <div>
+                <a class="btn btn-sm btn-outline-secondary" style="background-color: rgb(157, 18, 18);text-decoration:none;color:white;margin-left:10px;text-transform:uppercase;" href="{% url 'travel' %}">Details</a>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card shadow-sm">
+            <img src="/static/img/health.jfif" alt="RMW AIRLINES" width="360" height="170" style="border-radius:5px;">
+            <div class="card-body">
+            <h1 class="text-center" style="font-size:16px;color:#b71919;"><b>HEALTH INSURANCE</b></h1>
+            <h1 class="text-center" style="font-size:15px;text-color:rgb(33 37 41);">Comprehensive health insurance plans covering medical, dental, and vision expenses, ensuring employees have access to necessary healthcare services and financial protection.</h1>
+            <div>
+                <a class="btn btn-sm btn-outline-secondary" style="background-color: rgb(157, 18, 18);text-decoration:none;color:white;margin-left:10px;text-transform:uppercase;" href="{% url 'health' %}">Details</a>
+            </div>
+            
+            </div>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="card shadow-sm">
+            <img src="/static/img/retire.jfif" alt="RMW AIRLINES" width="360" height="170" style="border-radius:5px;">
+            <div class="card-body">
+            <h1 class="text-center" style="font-size:16px;color:#b71919;"><b>RETIREMENT PLANS</b></h1>
+            <h1 class="text-center" style="font-size:15px;text-color:rgb(33 37 41);">Retirement savings plans, allowing employees to contribute a portion of their earnings for future financial security, often accompanied by matching contributions from the airline.</h1>
+            <div>
+                <a class="btn btn-sm btn-outline-secondary" style="background-color: rgb(157, 18, 18);text-decoration:none;color:white;margin-left:10px;text-transform:uppercase;" href="{% url 'retire' %}">Details</a>
+            </div>
+            
+            </div>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="card shadow-sm">
+            <img src="/static/img/life.jfif" alt="RMW AIRLINES" width="360" height="170" style="border-radius:5px;">
+            <div class="card-body">
+            <h1 class="text-center" style="font-size:16px;color:#b71919;"><b>LIFE INSURANCE</b></h1>
+            <h1 class="text-center" style="font-size:15px;text-color:rgb(33 37 41);">Life insurance coverage and disability benefits provided by the airline, offering financial protection in the event of unforeseen circumstances or accidents.</h1>
+            <div>
+                <a class="btn btn-sm btn-outline-secondary" style="background-color: rgb(157, 18, 18);text-decoration:none;color:white;margin-left:10px;text-transform:uppercase;" href="{% url 'life' %}">Details</a>
+            </div>
+            
+            </div>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="card shadow-sm">
+            <img src="/static/img/assist.jfif" alt="RMW AIRLINES" width="360" height="170" style="border-radius:5px;">
+            <div class="card-body">
+            <h1 class="text-center" style="font-size:16px;color:#b71919;"><b>EMPLOYEE ASSISTANCE PROGRAMS</b></h1>
+            <h1 class="text-center" style="font-size:15px;text-color:rgb(33 37 41);">EAPs offering support services like counseling, mental health resources, and work-life balance assistance, aiding employees in addressing personal and professional challenges.</h1>
+            <div>
+                <a class="btn btn-sm btn-outline-secondary" style="background-color: rgb(157, 18, 18);text-decoration:none;color:white;margin-left:10px;text-transform:uppercase;" href="{% url 'assist' %}">Details</a>
+            </div>
+            
+            </div>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="card shadow-sm">
+            <img src="/static/img/bonus.jfif" alt="RMW AIRLINES" width="360" height="170" style="border-radius:5px;">
+            <div class="card-body">
+            <h1 class="text-center" style="font-size:16px;color:#b71919;"><b>BONUSES</b></h1>
+            <h1 class="text-center" style="font-size:15px;text-color:rgb(33 37 41);">Participation in profit-sharing programs that distribute a portion of company profits among employees, and performance-based bonuses or incentives to reward exceptional work.</h1>
+            <div>
+                <a class="btn btn-sm btn-outline-secondary" style="background-color: rgb(157, 18, 18);text-decoration:none;color:white;margin-left:10px;text-transform:uppercase;" href="{% url 'bonus' %}">Details</a>
+            </div>
+            
+            </div>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="card shadow-sm">
+            <img src="/static/img/train.jfif" alt="RMW AIRLINES" width="360" height="170" style="border-radius:5px;">
+            <div class="card-body">
+            <h1 class="text-center" style="font-size:16px;color:#b71919;"><b>TRAINING</b></h1>
+            <h1 class="text-center" style="font-size:15px;text-color:rgb(33 37 41);">Comprehensive training and development programs to enhance skills, advance careers, and provide growth opportunities within the airline industry.</h1>
+            <div>
+                <a class="btn btn-sm btn-outline-secondary" style="background-color: rgb(157, 18, 18);text-decoration:none;color:white;margin-left:10px;text-transform:uppercase;" href="{% url 'train' %}">Details</a>
+            </div>
+            
+            </div>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="card shadow-sm">
+            <img src="/static/img/discount.jfif" alt="RMW AIRLINES" width="360" height="170" style="border-radius:5px;">
+            <div class="card-body">
+            <h1 class="text-center" style="font-size:16px;color:#b71919;"><b>EMPLOYEE DISCOUNTS</b></h1>
+            <h1 class="text-center" style="font-size:15px;text-color:rgb(33 37 41);">Special discounts on travel-related services, accommodations, car rentals, and retail goods, allowing employees to enjoy exclusive savings, discounted rates and benefits. </h1>
+            <div>
+                <a class="btn btn-sm btn-outline-secondary" style="background-color: rgb(157, 18, 18);text-decoration:none;color:white;margin-left:10px;text-transform:uppercase;" href="{% url 'discount' %}">Details</a>
+            </div>
+            
+            </div>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="card shadow-sm">
+            <img src="/static/img/wellness.jfif" alt="RMW AIRLINES" width="360" height="170" style="border-radius:5px;">
+            <div class="card-body">
+            <h1 class="text-center" style="font-size:16px;color:#b71919;"><b>WELLNESS PROGRAMS</b></h1>
+            <h1 class="text-center" style="font-size:15px;text-color:rgb(33 37 41);">Wellness initiatives promoting employee well-being, including gym memberships, wellness challenges, health screenings, and access to fitness facilities.</h1>
+            <div>
+                <a class="btn btn-sm btn-outline-secondary" style="background-color: rgb(157, 18, 18);text-decoration:none;color:white;margin-left:10px;text-transform:uppercase;" href="{% url 'wellness' %}">Details</a>
+            </div>
+            
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Registration|RMWAirlines</title>
+    <style>
+      #parent{position:relative}
+      .logo_area a{position:absolute;top:0;left:25px;width:75;height:105;z-index:9999;}
+    </style>
+</head>
+<body>
+  <div id="parent">
+    <div class="logo_area"><a>
+    <img src="/static/img/logo.avif" alt="RMW AIRLINES" width="110" height="120" style="position:absolute;top=0"></div></a>
+    <div class="main_menu_inner">
+      <nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+        <div class="container-fluid" style="margin-left:130px;top:0;position:relative;">
+          
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/"><b>HOME</b></a> {% comment %} index.html {% endcomment %}
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/book"><b>BOOKING</b></a> {% comment %} book.html {% endcomment %}
+              </li>
+              
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <b>MANAGE</b>
+                </a>
+                <ul class="dropdown-menu"><span></span>
+                  <li><a class="dropdown-item" href="/track"><b>TRACK RESERVATION</b></a></li>
+                  <li><a class="dropdown-item" href="/change"><b>CHANGE BOOKING</b></a></li>
+                  <li><a class="dropdown-item" href="/cancel"><b>CANCEL BOOKING</b></a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/about"><b>ABOUT US</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/faq"><b>FAQ</b></a>
+              </li>
+            </ul>
+        </div>
+      </div> 
+  </nav></div>
+</div>
+</div>
+
+<h1 style="text-transform:uppercase;text-decoration:none;margin-top:60px;margin-bottom:20px;margin-left:465px;color:#9d1212;"><b>flight details</b></h1>
+<div class="card-body"  style="background-color:rgba(157, 18, 18,.3);border-radius:5.5px;color:rgb(33 37 41);margin-left:110px;z-index:1;margin-right:110px;padding:0.5px;height:210px;"> 
+    <img src="/static/img/booking.avif" class="d-block w-50" alt="airplane" height="350px" style="position:absolute;margin-left:250px;z-index:9999;top:130px;">
+    <p class="card-text" style="margin-left:150px;margin-top:30px;position:absolute;"><b>Flight No:  {{FlightNo}}</b></p>
+    <p class="card-text" style="margin-left:620px;margin-top:30px;"><b>Departure Date: {{DepartureDate}}</b> </p>
+    <p class="card-text" style="position:absolute;margin-left:150px;"><b>Departure Time: {{DepartureTime}}</b> </p>
+    <p class="card-text" style="margin-left:620px;"><b>Arrival Date: {{ArrivalDate}}</b> </p>
+    <p class="card-text" style="position:absolute;margin-left:150px;"><b>Arrival Time: {{ArrivalTime}}</b> </p>
+    <p class="card-text" style="margin-left:620px;"><b>Departure: {{Departure}}</b> </p>
+    <p class="card-text" style="position:absolute;margin-left:150px;"><b>Destination: {{Destination}}</b> </p>
+    <p class="card-text" style="margin-left:620px;"><b>Flight Status: {{Status}}</b> </p>
+</div>
+
+<h1 style="text-transform:uppercase;text-decoration:none;margin-top:60px;margin-bottom:20px;margin-left:445px;color:#9d1212;"><b>airplane details</b></h1>
+<div class="card-body"  style="background-color:rgba(157, 18, 18,.3);border-radius:5.5px;color:rgb(33 37 41);margin-left:110px;z-index:1;margin-right:110px;padding:0.5px;height:210px;"> 
+<div id="top" style="background-color: rgba(157, 18, 18);width:125px;height:35px;text-decoration:none;position:absolute;margin-left:450px;margin-top:40px;border-radius:63px"></div>
+<h5 style="color:white;position:absolute;margin-left:457px;margin-top:45px;"><b>Plane No #{{PlaneNo}}</b> </h5>
+<p class="card-text" style="margin-left:210px;margin-top:80px;position:absolute;"><b>Plane capacity: {{planecapacity}}</b> </p>
+<p class="card-text" style="margin-left:620px;margin-top:80px;"><b>Plane Fuel: {{PlaneFuel}} </b></p>
+<p class="card-text" style="position:absolute;margin-left:210px;"><b>Plane Model: {{Planemodel}} </b></p>
+<p class="card-text" style="margin-left:620px;"><b>Plane Registration: {{PlaneReg}}</b> </p>
+<h1 style="text-transform:uppercase;text-decoration:none;margin-top:130px;margin-bottom:20px;margin-left:320px;color:#9d1212;"><b>passenger details</b></h1>
+{% for reservation in Reservations %}
+  
+    <label style="color:rgb(33 37 41);text-decoration:none;text-transform:uppercase;margin-left:10px;margin-top:10px;"><b>Reservation No: {{reservation.reservationno}}</b></label>
+    {% for booking in Bookings %}
+        {% if booking.reservationno == reservation %}
+            {% for Person in Persons%}
+                {% if Person == booking.personid.personid %}
+                    {# Start #}
+                    {% for resticket in ReservedTickets %}
+                        {% if Person.personid == resticket.ticketno.personid.personid %}
+                        <div class="card-body"  style="background-color:rgba(157, 18, 18,.3);border-radius:5.5px;color:rgb(33 37 41);margin-right:150px;padding:10px;margin-top:30px;height:250px;width:1040px;">
+                            <div id="top" style="background-color: rgba(157, 18, 18);width:125px;height:35px;text-decoration:none;position:absolute;margin-left:60px;margin-top:95px;border-radius:63px"></div>
+                            <h5 style="color:white;position:absolute;margin-left:70px;margin-top:99px;"><b>Ticket #{{resticket.ticketno.ticketno}}</b></h5>
+                            <p class="card-text" style="position:absolute;margin-left:250px;margin-top:73px;"><b>Fare: {{resticket.ticketno.fare}} </b></p>
+                            <p class="card-text" style="margin-left:470px;margin-top:73px;"><b>Seat No: {{resticket.ticketno.seatno}}</b> </p>
+                            <p class="card-text" style="position:absolute;margin-left:250px;"><b>Name: {{Person.firstname}} </b></p>                          
+                            {% for belonging in Belongings %}
+                                {% if Person == belonging.personid %}
+                                    <p class="card-text" style="position:absolute;margin-left:470px;"><b>Luggage No: {{belonging.luggageno.luggageno}}</b> </p>
+                                    <p class="card-text" style="margin-left:670px;margin-top:15px;"><b>No of Bags: {{belonging.luggageno.noofbags}} </b></p></div>
+                            
+                                {% endif %}
+                            {% endfor %}
+
+                        {% endif %}           
+                    {% endfor %}
+                    {# END #}
+                {% endif %}
+            {% endfor %}                                                                                            
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+<div style="margin-top:100px;position:absolute;color:white;">hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</div>
+<div style="margin-top:100px;position:absolute;color:white;">hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>           
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{%block title%}Tracking{%endblock title%}
+
+{%block body%}
+
+<div id="track-back" style="left:33%;background-color: rgba(157, 18, 18,.25);width:450px;height:450px;text-decoration:none;position:absolute;margin-top:50px;border-radius:11px;"></div>
+<h1 style="text-transform:uppercase;text-decoration:none;margin-top:100px;margin-left:454px;color:#9d1212;"><b>change booking</b></h1>
+<form action="{%url 'change booking' %}" method="POST">
+    {% csrf_token %}
+    <div style="position:relative;">
+    <label for="ResNo" style="margin-top:70px;margin-left:480px;"><b>Reservation No:</b></label>
+    <input name="ResNo" type="number" required></div>
+    <div>
+        <button class="btn btn-sm btn-outline-secondary" type="submit" style="background-color: rgb(157, 18, 18);text-decoration:none;color:white;margin-left:555px;margin-top:50px;text-transform:uppercase;position:absolute;">Change Reservation</button>
+    </div>
+</form>
+{%endblock body%}

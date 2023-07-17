@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{%block title%}Booking{%endblock title%}
+
+{%block body%}
+<h1 style="text-transform:uppercase;text-decoration:none;margin-top:60px;margin-bottom:20px;margin-left:465px;color:#9d1212;"><b>Available Flights</b></h1>
+<div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-1 g-3" style="position;absolute">
+           {%if Flights%}
+            {%for flight in Flights%}
+                <div class="col" style="position;relative">
+                    <div class="card shadow-sm" style="position;relative">
+                        <img src="/static/img/booking.avif" class="d-block w-50" alt="airplane" height="300px" style="position:absolute;margin-left:290px;z-index:9999;top:0;">
+                        <div class="card-body"  style="background-color:rgba(157, 18, 18,.3);border-radius:5.5px;color:rgb(33 37 41);"> 
+                            <p class="card-text" style="margin-left:150px;margin-top:30px;position:absolute;" ><b>FlightNo: {{flight.flightno}}</b></p>
+                            {% for flyAir in Airline_flights %}
+                                {% if flyAir.flightno.flightno == flight.flightno %}
+                                    {% for airline in Airlines %}                                    
+                                        {% if flyAir.licenseno.licenseno == airline.licenseno %}
+                                            <p class="card-text" style="margin-left:620px;margin-top:30px;"><b>Airline Name: {{airline.airlinename}}</b></p>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}  
+                            <p class="card-text" style="position:absolute;margin-left:150px;"><b>Departure: {{flight.departure}}</b></p>
+                            <p class="card-text" style="margin-left:620px;"><b>Destination: {{flight.destination}}</b></p>                        
+                            <p class="card-text" style="position:absolute;margin-left:150px;" ><b>Departure Date: {{flight.departuredate}}</b></p>
+                            <p class="card-text" style="margin-left:620px;" ><b>Departure time: {{flight.departuretime}}</b></p>                       
+                            <p class="card-text" style="position:absolute;margin-left:150px;" ><b>Arrival Date: {{flight.arrivaldate}}</b></p>
+                            <p class="card-text" style="margin-left:620px;" ><b>Arrival time: {{flight.arrivaltime}}</b></p>
+                            <form action="{% url 'Final Booking' flightno=flight.flightno NoOfPassengers=NoOfPassengers%}">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary" style="background-color: rgb(157, 18, 18);text-decoration:none;color:white;text-transform:uppercase;margin-left:890px;margin-bottom:10px;"><b>Choose Flight</b></button>
+                                    </div>
+                                    <small class="text-body-secondary"> </small>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}   
+        {%else%}
+            <h6 class="text-center" style="text-transform:uppercase;text-decoration:none;margin-top:60px;margin-bottom:20px;margin-left:auto;color:#9d1212;"><b>No Flights Available at the moment, We apologise for your inconvenience.</b></h6>
+        {%endif%}
+    </div>  
+</div>
+{%endblock body%}

@@ -1,0 +1,22 @@
+{% extends 'EmpHome.html' %}
+
+{% block title %}Profile{% endblock title %}
+
+{% block body %}
+<h1 style="text-transform:uppercase;text-decoration:none;margin-top:60px;margin-bottom:20px;margin-left:510px;color:#9d1212;"><b>Profile</b></h1>
+<div class="card-body"  style="background-color:rgba(157, 18, 18,.3);border-radius:5.5px;color:rgb(33 37 41);margin-left:110px;margin-right:110px;padding:0.5px;height:350px;"> 
+    <p class="card-text" style="position:absolute;margin-left:50px;margin-top:37px;"><b>Firstname: {{Firstname}}</b></p>
+    <p class="card-text" style="margin-left:270px;margin-top:37px;position:absolute;"><b>Middlename: {{Middlename}}</b></p>
+    <p class="card-text" style="margin-left:500px;margin-top:37px;"><b>Lastname: {{Lastname}}</b></p>
+    <p class="card-text" style="position:absolute;margin-left:50px;"><b>Age: {{Age}}</b></p>
+    <p class="card-text" style="margin-left:270px;position:absolute;"><b>Phoneno: {{Phoneno}}</b></p>
+    <p class="card-text" style="margin-left:500px;margin-top:10px;"><b>Address: {{Address}}</b></p>
+    <p class="card-text" style="position:absolute;margin-left:50px;"><b>Gender: {{Gender}}</b></p>
+    <p class="card-text" style="margin-left:270px;position:absolute;"><b>Job: {{Job}}</b></p>
+    <p class="card-text" style="margin-left:500px;margin-top:10px;"><b>Qualification: {{Qualification}}</b></p>
+    <p class="card-text" style="position:absolute;margin-left:50px;"><b>Salary: {{Salary}}</b></p>
+    <p class="card-text" style="margin-left:270px;position:absolute;"><b>Startdate: {{Startdate}}</b></p>
+    <p class="card-text" style="margin-left:500px;margin-top:10px;"><b>Enddate: {{Enddate}}</b></p>
+    <h5 class="card-text" style="position:absolute;margin-left:50px;margin-top:30px;color:#9d1212;"><b>Note: If you want to edit your profile. Kindly contact admin</b></h5>
+</div>
+{% endblock body %}

@@ -1,0 +1,18 @@
+{% extends 'EmpHome.html' %}
+
+{% block title %}Flight{% endblock title %}
+
+{% block body %}
+<div id="track-back" style="left:33%;background-color: rgba(157, 18, 18,.25);width:450px;height:450px;text-decoration:none;position:absolute;margin-top:50px;border-radius:11px;"></div>
+<h1 style="text-transform:uppercase;text-decoration:none;margin-top:100px;margin-left:485px;color:#9d1212;"><b>FLIGHT DETAILS</b></h1>
+<form action="{%url 'EmpFlights'%}" method="post">
+    {% csrf_token %}
+    <div style="position:relative;">
+    <label for="FlightNo" style="margin-top:50px;margin-left:480px;"><b>Enter Flight No: </b></label>
+    <input type="number" name="FlightNo" placeholder="Enter FlightNo here" required></div>
+    <div>
+        <button class="btn btn-sm btn-outline-secondary" type="submit" style="background-color: rgb(157, 18, 18);text-decoration:none;color:white;margin-left:555px;margin-top:40px;text-transform:uppercase;position:absolute;">Fetch Flight Details</button>
+    </div>
+    <p style="margin-top:100px;margin-left:435px;"><b>NOTE: </b>Kindly check your email for your assigned FlightNo</p>
+</form>
+{% endblock body %}
